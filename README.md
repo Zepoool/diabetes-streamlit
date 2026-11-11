@@ -3,7 +3,7 @@
 Prototipo académico que despliega el modelo del segundo corte (Pima Indians Diabetes Database) en una
 aplicación web. **No sustituye el criterio ni el diagnóstico de un profesional de la salud.**
 
-- **Aplicación pública:** diabetes-app-gs3ayjt9upvesnvbarq8ki.streamlit.app
+- **Aplicación pública:** https://diabetes-app-gs3ayjt9upvesnvbarq8ki.streamlit.app
 - **Integrantes:** Fabián López, Jonathan Cárdenas, Luis Cárdenas
 - **Datos:** [Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database) (NIDDK, Smith et al., 1988) — 768 registros, 8 predictoras.
 
@@ -35,7 +35,7 @@ No se modificó el modelo respecto al segundo corte.
 | `entrenar_modelo.py` | Regenera el pipeline y los archivos auxiliares |
 | `test_app.py` | Pruebas: caso normal, entrada inválida, datos no disponibles, registro conocido |
 | `requirements.txt` | Dependencias con versión fija |
-| `Notebook_Proyecto_Diabetes_Corte_2.ipynb` | Notebook (añadir al repo) |
+| `Notebook_Proyecto_Diabetes_Corte_2.ipynb` | Notebook |
 
 ## Ejecutar localmente
 ```bash
@@ -64,5 +64,3 @@ Detecta 38 de 54 casos de la prueba (16 falsos negativos); prueba pequeña (154)
 | Verificación | Se reprodujeron las métricas del notebook con `entrenar_modelo.py` (accuracy 0,734, recall 0,704, matriz 75/25/16/38). La predicción de la app coincide con la del notebook en los 154 registros de prueba. Se ejecutaron pruebas automáticas (`test_app.py`). En la URL pública se probaron un caso normal, una entrada inválida (glucosa 900) y un registro del conjunto de prueba, con coincidencia respecto al notebook. Todos los integrantes revisaron el código. |
 | Problemas encontrados | (1) El formulario obligaba a llenar insulina y pliegue cutáneo, variables con 48,7 % y 29,6 % de datos no registrados. (2) El pipeline exige columnas en minúsculas y en orden fijo, y el `.joblib` depende de la versión de scikit-learn. (3) El modelo deja 16 falsos negativos de 54 casos, y no se optimizó el umbral ni los hiperparámetros. (4) La carpeta oculta `.streamlit` no se subió a GitHub al arrastrar los archivos. |
 | Ajustes realizados | (1) Se añadió la opción "no disponible" para presión, pliegue cutáneo e insulina. (2) Se guardó el pipeline completo, entrenado solo con el conjunto de entrenamiento, y se fijaron las versiones en `requirements.txt`. (3) Se mantuvo el modelo del segundo corte y se documentó la limitación en la app. (4) La carpeta `.streamlit` se creó manualmente en GitHub. |
-| Problemas encontrados | `[COMPLETAR]` |
-| Ajustes realizados | `[COMPLETAR]` |
