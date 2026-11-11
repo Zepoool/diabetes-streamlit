@@ -3,7 +3,7 @@
 Prototipo académico que despliega el modelo del segundo corte (Pima Indians Diabetes Database) en una
 aplicación web. **No sustituye el criterio ni el diagnóstico de un profesional de la salud.**
 
-- **Aplicación pública:** `PEGAR_AQUI_LA_URL_DE_STREAMLIT`
+- **Aplicación pública:** diabetes-app-gs3ayjt9upvesnvbarq8ki.streamlit.app
 - **Integrantes:** Fabián López, Jonathan Cárdenas, Luis Cárdenas
 - **Datos:** [Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database) (NIDDK, Smith et al., 1988) — 768 registros, 8 predictoras.
 
@@ -61,7 +61,7 @@ Detecta 38 de 54 casos de la prueba (16 falsos negativos); prueba pequeña (154)
 |---|---|
 | Herramienta | Claude (Anthropic), chat con ejecución de código |
 | Propósito | Revisar el rendimiento del modelo del segundo corte y generar el código de la aplicación, el guardado del pipeline, las pruebas y el README |
-| Prompt principal | `[PEGAR_AQUI_EL_PROMPT_REAL]` (adjuntos: enunciado de la actividad, notebook del segundo corte y diabetes.csv) |
+| Prompt principal | Con el enunciado de la Actividad 1 del tercer corte (Integración y despliegue del modelo con Streamlit), el notebook del segundo corte y el archivo diabetes.csv, revisa el rendimiento del modelo seleccionado (accuracy, precision, recall, F1, matriz de confusión y validación cruzada) y verifica si hay fuga de información, desbalance u otros problemas del pipeline. Luego reproduce el pipeline completo (imputación por mediana, escalado y regresión logística con class_weight="balanced"), serialízalo con joblib y desarrolla una aplicación en Streamlit que cargue el modelo sin reentrenarlo. La aplicación debe incluir presentación del proyecto, visualizaciones del EDA, formulario con validación de rangos y tipos, predicción con probabilidad, métricas finales, matriz de confusión y limitaciones, junto con requirements.txt, README.md y pruebas de un caso normal, una entrada inválida y un registro del conjunto de prueba que coincida con el notebook. (adjuntos: enunciado de la actividad, notebook del segundo corte y diabetes.csv) |
 | Verificación | Se reprodujeron las métricas del notebook con `entrenar_modelo.py` (accuracy 0,734, recall 0,704, matriz 75/25/16/38); se comprobó que la predicción de la app coincide con la del notebook en los 154 registros de prueba; pruebas automáticas con `test_app.py`; `[AÑADIR_LA_PRUEBA_MANUAL_EN_LA_URL_PUBLICA]` |
 | Problemas encontrados | `[COMPLETAR]` |
 | Ajustes realizados | `[COMPLETAR]` |
