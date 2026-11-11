@@ -24,6 +24,16 @@ por lo que las métricas de la app son las del notebook. La app carga `pipeline_
 Validación cruzada (5 pliegues, entrenamiento): accuracy 0,762 ± 0,011 · recall 0,701 ± 0,039 · AUC 0,844 ± 0,016.
 No se modificó el modelo respecto al segundo corte.
 
+## Revisión de calidad del modelo
+Se aplicó la ficha de revisión de calidad: no hay fuga de información (imputación y escalado dentro del
+pipeline, ajustados solo con entrenamiento), la división es estratificada y no se eliminaron atípicos sin
+justificación. Accuracy (0,734) y validación cruzada (0,762) superan el umbral de 0,70 y superan la línea
+base de predecir siempre "no diabetes" (65,1 %). La regresión logística estándar mostraba accuracy alto con
+recall bajo (0,575 en CV), una métrica engañosa, por lo que se eligió la versión con `class_weight="balanced"`.
+Brecha entrenamiento–prueba de 0,025 (sin sobreajuste) y recall estable en CV (±0,039). Por clase en prueba:
+No diabetes, precision 0,824 y recall 0,750; Diabetes, precision 0,603 y recall 0,704. Con solo 154 registros
+de prueba las métricas son ruidosas, por lo que la selección se apoyó en validación cruzada y en prueba.
+
 ## Contenido del repositorio
 | Archivo | Función |
 |---|---|
