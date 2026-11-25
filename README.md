@@ -45,7 +45,7 @@ de prueba las métricas son ruidosas, por lo que la selección se apoyó en vali
 | `entrenar_modelo.py` | Regenera el pipeline y los archivos auxiliares |
 | `test_app.py` | Pruebas: caso normal, entrada inválida, datos no disponibles, registro conocido |
 | `requirements.txt` | Dependencias con versión fija |
-| `Notebook_Proyecto_Diabetes_Corte_2.ipynb` | Notebook |
+| `Notebook_Proyecto_Diabetes_Final.ipynb` | Notebook |
 
 ## Ejecutar localmente
 ```bash
